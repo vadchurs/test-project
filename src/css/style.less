@@ -1,0 +1,158 @@
+body {
+    background-image: url("./../../image/apple-nastolnye.jpg");
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+body *:focus {
+    outline: 1px solid transparent;
+}
+
+.form-wrapper {
+    position: relative;
+    font-size: 16px;
+    width: 90%;
+    margin: 50px auto;
+    transform: skew(-50deg);
+    .error-message {
+        display: none;
+        left: 16px;
+        top: 57px;
+        position: absolute;
+        transform: skew(50deg);
+        text-shadow: 0 0 2px white;
+        color: red;
+        padding: 3px;
+    }
+    form {
+        display: flex;
+    }
+    .input-wrapper {
+        width: 75%;
+        background-color: rgba(255,255,255,0.6);
+        border: 3px solid white;
+        border-right-width: 4px;
+        border-left-width: 4px;
+        overflow: hidden;
+        input {
+            transform: skew(50deg);
+            background-color: transparent;
+            border: none;
+            width: 100%;
+            padding-left: 30px;
+            height: 50px;
+            &:focus {
+                border: none;
+            }
+        }
+    }
+}
+
+.form-wrapper * {
+   padding: 0;
+    margin: 0;
+}
+
+.form-wrapper button {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: 3px solid white;
+    border-right-width: 4px;
+    border-left: none;
+    width: 25%;
+    background-color: red;
+    color: white;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    p {
+        transform: skew(50deg);
+    }
+}
+
+.input-wrapper.error {
+    background-color: coral;
+}
+
+.modal-window {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -200px;
+    margin-top: -150px;
+    border: 3px solid white;
+    text-align: center;
+    padding: 60px 0;
+    color: white;
+    font-size: 24px;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 0.4s linear;
+    .close {
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        width: 40px;
+        height: 40px;
+        background-color: black;
+        color: white;
+        border-radius: 50%;
+        font-size: 32px;
+        transition: 0.3s;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.modal-active {
+    visibility: visible;
+    transform: scale(1);
+}
+
+.modal-window p {
+    color: aqua;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .form-wrapper {
+        transform: skew(0);
+    }
+    .form-wrapper .input-wrapper {
+        width: 55%;
+        border-width:3px;
+    }
+    .form-wrapper .input-wrapper input {
+        transform: skew(0);
+        padding-left: 30px;
+    }
+    .form-wrapper button {
+        width: 45%;
+        border-width:3px;
+    }
+
+    .form-wrapper button p {
+        transform: skew(0);
+    }
+    .modalWindow {
+        width: 240px;
+        margin-left: -120px;
+    }
+}
+
+
+
