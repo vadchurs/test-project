@@ -450,6 +450,11 @@ body *:focus {
     -webkit-transform: skew(0);
     transform: skew(0);
   }
+  .form-wrapper .error-message {
+    left: 0;
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
   .form-wrapper .input-wrapper {
     width: 55%;
     border-width: 3px;
