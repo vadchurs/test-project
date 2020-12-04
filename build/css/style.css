@@ -472,7 +472,7 @@ body *:focus {
     -webkit-transform: skew(0);
     transform: skew(0);
   }
-  .modalWindow {
+  .modal-window {
     width: 240px;
     margin-left: -120px;
   }
